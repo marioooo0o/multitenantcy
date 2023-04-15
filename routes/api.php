@@ -16,5 +16,5 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::post('/login', function (Request $request) {
-    return Tenant::where('id', $request->id);
+    return Tenant::where('id', $request->id)->first();
 });
